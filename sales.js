@@ -10,13 +10,13 @@ function addItem()
   }
   else
   {
-    number(newItem);
+    newItem = Number(newItem);
     runningTotal += newItem;
     var dollars;
     dollars = asCurrency(runningTotal);
     document.getElementById("subtotal").innerHTML=dollars;
     document.getElementById("price").value="";
-    setCookies(preTax, runningTotal, 1)
+    setCookie(preTax, dollars, 1);
   }
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
